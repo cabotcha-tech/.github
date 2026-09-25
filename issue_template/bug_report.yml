@@ -1,0 +1,86 @@
+name: "🐛 Bug Report"
+description: Reporte um comportamento inesperado ou erro no sistema.
+title: "fix([escopo]): "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Obrigado por reportar um bug! Por favor, preencha as informações abaixo para nos ajudar a resolver o problema rapidamente.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: "🐛 Descrição do Bug"
+      description: "Descreva de forma clara e concisa o que está acontecendo."
+      placeholder: "Ex: O sistema trava ao tentar fazer login com email corporativo."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: "🔄 Passos para Reproduzir"
+      description: "Liste os passos exatos para reproduzir o comportamento."
+      placeholder: |
+        1. Vá para '...'
+        2. Clique em '...'
+        3. Role até '...'
+        4. Veja o erro
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: "✅ Comportamento Esperado"
+      description: "O que deveria acontecer?"
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: "❌ Comportamento Atual"
+      description: "O que está acontecendo de fato? Inclua logs ou mensagens de erro se houver."
+      render: shell
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: "📸 Evidências"
+      description: "Se aplicável, adicione screenshots, GIFs ou vídeos. (Você pode colar imagens diretamente aqui)."
+    validations:
+      required: false
+
+  - type: dropdown
+    id: project
+    attributes:
+      label: "🖥️ Projeto Afetado"
+      options:
+        - spyrogyra-os
+        - spyrogyra-docs
+        - cabotcha-website
+        - opendados-worldcupdata
+        - Outro
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: "Versão / Branch"
+      description: "Ex: v0.1.0, main, feature/auth"
+      placeholder: "main"
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: "📝 Contexto Adicional"
+      description: "Qualquer outra informação relevante (SO, navegador, logs)."
+    validations:
+      required: false
