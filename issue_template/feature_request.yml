@@ -1,0 +1,86 @@
+name: "✨ Feature Request"
+description: Sugira uma nova funcionalidade ou melhoria para o projeto.
+title: "feat([escopo]): "
+labels: ["enhancement", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Obrigado por sugerir uma melhoria! Ajude-nos a entender como isso agregaria valor ao projeto.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: "✨ Resumo da Feature"
+      description: "Descreva a funcionalidade desejada em 1-2 frases."
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: "🎯 Problema que Resolve"
+      description: "Qual dor ou limitação atual essa feature resolveria?"
+      placeholder: "Ex: Atualmente, o usuário precisa fazer X manualmente, o que causa Y."
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: "💡 Solução Proposta"
+      description: "Descreva como você imagina que essa feature deveria funcionar."
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: "🔄 Alternativas Consideradas"
+      description: "Você pensou em outras formas de resolver isso? Por que não funcionaram?"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: project
+    attributes:
+      label: "📐 Projeto Alvo"
+      options:
+        - spyrogyra-os
+        - spyrogyra-docs
+        - cabotcha-website
+        - opendados-worldcupdata
+        - Outro
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: "Prioridade Sugerida"
+      options:
+        - Baixa
+        - Média
+        - Alta
+        - Crítica
+    validations:
+      required: true
+
+  - type: dropdown
+    id: complexity
+    attributes:
+      label: "Complexidade Estimada"
+      options:
+        - Simples (menos de 1 dia)
+        - Média (1 a 3 dias)
+        - Complexa (mais de 3 dias)
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: "📝 Contexto Adicional"
+      description: "Mockups, referências, links ou qualquer informação extra."
+    validations:
+      required: false
